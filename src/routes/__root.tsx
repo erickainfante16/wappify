@@ -127,7 +127,7 @@ function RootComponent() {
         <Footer />
         <CartDrawer />
         <CheckoutModal />
-        <Toaster theme="dark" richColors position="top-center" />
+        <Toaster theme="dark" richColors position="bottom-center" />
       </StoreProvider>
     </QueryClientProvider>
   );
