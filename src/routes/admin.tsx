@@ -34,9 +34,9 @@ function Admin() {
     if (Object.keys(err).length) return;
     const id = editing && editing !== "new" ? editing.id : crypto.randomUUID();
     saveService({
-      id, name: f["name"].trim(), category: f["category"] as Category, price,
-      description: f["description"].trim(),
-      features: f["features"].split("\n").map((s) => s.trim()).filter(Boolean),
+      id, name: (f["name"] ?? "").trim(), category: f["category"] as Category, price,
+      description: (f["description"] ?? "").trim(),
+      features: (f["features"] ?? "").split("\n").map((s) => s.trim()).filter(Boolean),
     });
     toast.success(editing === "new" ? "Servicio creado" : "Servicio actualizado");
     setEditing(null);
