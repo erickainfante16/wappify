@@ -7,9 +7,9 @@ import { mxn, useStore } from "@/lib/store";
 export const Route = createFileRoute("/servicios")({
   head: () => ({
     meta: [
-      { title: "Servicios y Planes — AutoFlow" },
+      { title: "Servicios y Planes — Wappify" },
       { name: "description", content: "Planes y módulos de automatización por WhatsApp con precios en MXN." },
-      { property: "og:title", content: "Servicios y Planes — AutoFlow" },
+      { property: "og:title", content: "Servicios y Planes — Wappify" },
       { property: "og:description", content: "Elige tu plan y agrega módulos de pagos, logística e IA." },
     ],
   }),

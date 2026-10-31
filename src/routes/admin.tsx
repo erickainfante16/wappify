@@ -8,9 +8,9 @@ import { mxn, useStore, type Category, type Service } from "@/lib/store";
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
-      { title: "Panel de Administración — AutoFlow" },
-      { name: "description", content: "Gestiona los servicios y paquetes de AutoFlow." },
-      { property: "og:title", content: "Panel de Administración — AutoFlow" },
+      { title: "Panel de Administración — Wappify" },
+      { name: "description", content: "Gestiona los servicios y paquetes de Wappify." },
+      { property: "og:title", content: "Panel de Administración — Wappify" },
       { property: "og:description", content: "CRUD de servicios y paquetes." },
     ],
   }),

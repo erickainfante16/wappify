@@ -7,9 +7,9 @@ import { Field } from "@/components/Layout";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Iniciar sesión — AutoFlow" },
-      { name: "description", content: "Accede a tu cuenta de AutoFlow." },
-      { property: "og:title", content: "Iniciar sesión — AutoFlow" },
+      { title: "Iniciar sesión — Wappify" },
+      { name: "description", content: "Accede a tu cuenta de Wappify." },
+      { property: "og:title", content: "Iniciar sesión — Wappify" },
       { property: "og:description", content: "Acceso para clientes y dueños de negocio." },
     ],
   }),
