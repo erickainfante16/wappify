@@ -131,10 +131,10 @@ export function CheckoutModal() {
     e.preventDefault();
     const f = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
     const err: Record<string, string> = {};
-    if (!f.negocio?.trim()) err.negocio = "Requerido";
-    if (!f.nombre?.trim()) err.nombre = "Requerido";
-    if (!/^\S+@\S+\.\S+$/.test(f.email || "")) err.email = "Correo inválido";
-    if (!/^\d{10}$/.test((f.tel || "").replace(/\D/g, ""))) err.tel = "10 dígitos";
+    if (!f["negocio"]?.trim()) err["negocio"] = "Requerido";
+    if (!f["nombre"]?.trim()) err["nombre"] = "Requerido";
+    if (!/^\S+@\S+\.\S+$/.test(f["email"] || "")) err["email"] = "Correo inválido";
+    if (!/^\d{10}$/.test((f["tel"] || "").replace(/\D/g, ""))) err["tel"] = "10 dígitos";
     setErrors(err);
     if (Object.keys(err).length) return;
     clearCart();
@@ -150,11 +150,11 @@ export function CheckoutModal() {
         </div>
       ) : (
         <form onSubmit={submit} className="space-y-3" noValidate>
-          <Field name="negocio" label="Nombre del comercio" error={errors.negocio} />
-          <Field name="nombre" label="Responsable" error={errors.nombre} />
+          <Field name="negocio" label="Nombre del comercio" error={errors["negocio"]} />
+          <Field name="nombre" label="Responsable" error={errors["nombre"]} />
           <div className="grid gap-3 sm:grid-cols-2">
-            <Field name="email" label="Correo" type="email" error={errors.email} />
-            <Field name="tel" label="WhatsApp" error={errors.tel} />
+            <Field name="email" label="Correo" type="email" error={errors["email"]} />
+            <Field name="tel" label="WhatsApp" error={errors["tel"]} />
           </div>
           <label className="block text-sm">
             <span className="mb-1 block text-muted-foreground">Método de pago</span>
@@ -170,7 +170,7 @@ export function CheckoutModal() {
   );
 }
 
-export function Field({ name, label, type = "text", error, textarea, defaultValue }: { name: string; label: string; type?: string; error?: string; textarea?: boolean; defaultValue?: string | number }) {
+export function Field({ name, label, type = "text", error, textarea, defaultValue }: { name: string; label: string; type?: string; error?: string | undefined; textarea?: boolean; defaultValue?: string | number | undefined }) {
   const cls = `field ${error ? "!border-destructive" : ""}`;
   return (
     <label className="block text-sm">

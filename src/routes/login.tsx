@@ -23,8 +23,8 @@ function Login() {
     e.preventDefault();
     const f = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
     const err: Record<string, string> = {};
-    if (!/^\S+@\S+\.\S+$/.test(f.email || "")) err.email = "Correo inválido";
-    if ((f.password || "").length < 6) err.password = "Mínimo 6 caracteres";
+    if (!/^\S+@\S+\.\S+$/.test(f["email"] || "")) err["email"] = "Correo inválido";
+    if ((f["password"] || "").length < 6) err["password"] = "Mínimo 6 caracteres";
     setErrors(err);
     if (Object.keys(err).length) return;
     toast.success("¡Bienvenida de vuelta!");
@@ -38,8 +38,8 @@ function Login() {
           <h1 className="mt-4 text-2xl font-bold">Inicia sesión</h1>
           <p className="text-sm text-muted-foreground">Clientes y dueños de negocio</p>
         </div>
-        <Field name="email" label="Correo" type="email" error={errors.email} />
-        <Field name="password" label="Contraseña" type="password" error={errors.password} />
+        <Field name="email" label="Correo" type="email" error={errors["email"]} />
+        <Field name="password" label="Contraseña" type="password" error={errors["password"]} />
         <div className="flex items-center justify-between text-sm">
           <label className="flex items-center gap-2 text-muted-foreground"><input type="checkbox" name="remember" className="accent-cta" /> Recordarme</label>
           <a href="#" className="text-cta hover:underline">¿Olvidaste?</a>

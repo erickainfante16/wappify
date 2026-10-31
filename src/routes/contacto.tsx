@@ -58,11 +58,11 @@ function Contacto() {
       </div>
       <form onSubmit={submit} noValidate className="surface space-y-4 p-6 md:col-span-3">
         <div className="grid gap-4 sm:grid-cols-2">
-          <Field name="nombre" label="Nombre" error={errors.nombre} />
-          <Field name="negocio" label="Negocio" error={errors.negocio} />
+          <Field name="nombre" label="Nombre" error={errors["nombre"]} />
+          <Field name="negocio" label="Negocio" error={errors["negocio"]} />
         </div>
-        <Field name="email" label="Correo" type="email" error={errors.email} />
-        <Field name="mensaje" label="¿Qué te gustaría automatizar?" textarea error={errors.mensaje} />
+        <Field name="email" label="Correo" type="email" error={errors["email"]} />
+        <Field name="mensaje" label="¿Qué te gustaría automatizar?" textarea error={errors["mensaje"]} />
         <button className="btn-cta w-full"><Send className="h-4 w-4" /> Enviar mensaje</button>
       </form>
     </section>

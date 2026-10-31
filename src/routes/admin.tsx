@@ -27,16 +27,16 @@ function Admin() {
     e.preventDefault();
     const f = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
     const err: Record<string, string> = {};
-    if (!f.name?.trim()) err.name = "Requerido";
-    const price = Number(f.price);
-    if (!(price > 0)) err.price = "Precio mayor a 0";
+    if (!f["name"]?.trim()) err["name"] = "Requerido";
+    const price = Number(f["price"]);
+    if (!(price > 0)) err["price"] = "Precio mayor a 0";
     setErrors(err);
     if (Object.keys(err).length) return;
     const id = editing && editing !== "new" ? editing.id : crypto.randomUUID();
     saveService({
-      id, name: f.name.trim(), category: f.category as Category, price,
-      description: f.description.trim(),
-      features: f.features.split("\n").map((s) => s.trim()).filter(Boolean),
+      id, name: f["name"].trim(), category: f["category"] as Category, price,
+      description: f["description"].trim(),
+      features: f["features"].split("\n").map((s) => s.trim()).filter(Boolean),
     });
     toast.success(editing === "new" ? "Servicio creado" : "Servicio actualizado");
     setEditing(null);
@@ -75,12 +75,12 @@ function Admin() {
       {editing && (
         <Modal title={cur ? "Editar servicio" : "Nuevo servicio"} onClose={() => setEditing(null)}>
           <form onSubmit={submit} noValidate className="space-y-3">
-            <Field name="name" label="Nombre" defaultValue={cur?.name} error={errors.name} />
+            <Field name="name" label="Nombre" defaultValue={cur?.name} error={errors["name"]} />
             <div className="grid grid-cols-2 gap-3">
               <label className="block text-sm"><span className="mb-1 block text-muted-foreground">Categoría</span>
                 <select name="category" defaultValue={cur?.category ?? "Planes"} className="field"><option>Planes</option><option>Módulos</option></select>
               </label>
-              <Field name="price" label="Precio (MXN)" type="number" defaultValue={cur?.price} error={errors.price} />
+              <Field name="price" label="Precio (MXN)" type="number" defaultValue={cur?.price} error={errors["price"]} />
             </div>
             <Field name="description" label="Descripción" defaultValue={cur?.description} />
             <Field name="features" label="Beneficios (uno por línea)" textarea defaultValue={cur?.features.join("\n")} />
