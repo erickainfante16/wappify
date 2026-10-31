@@ -81,8 +81,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AutoFlow — Automatización por WhatsApp para PyMEs" },
-      { name: "description", content: "AutoFlow automatiza ventas, pedidos y entregas de tu PyME por WhatsApp." },
+      { title: "Wappify — Automatización por WhatsApp para PyMEs" },
+      { name: "description", content: "Wappify automatiza ventas, pedidos y entregas de tu PyME por WhatsApp." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

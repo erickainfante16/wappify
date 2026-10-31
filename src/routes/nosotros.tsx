@@ -4,10 +4,10 @@ import { Eye, Github, Heart, Linkedin, Target } from "lucide-react";
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
     meta: [
-      { title: "Nosotros — AutoFlow" },
+      { title: "Nosotros — Wappify" },
       { name: "description", content: "Hacemos que la tecnología trabaje para las PyMEs. Conoce a Ericka Infante." },
-      { property: "og:title", content: "Nosotros — AutoFlow" },
-      { property: "og:description", content: "Misión, visión y equipo de AutoFlow." },
+      { property: "og:title", content: "Nosotros — Wappify" },
+      { property: "og:description", content: "Misión, visión y equipo de Wappify." },
     ],
   }),
   component: Nosotros,
@@ -38,7 +38,7 @@ function Nosotros() {
         <div>
           <h3 className="text-2xl font-bold">Ericka Infante</h3>
           <p className="font-semibold text-cta">Lead Full Stack Developer & Project Lead</p>
-          <p className="mt-2 text-muted-foreground">Diseña y desarrolla AutoFlow de punta a punta: desde la experiencia de usuario hasta la lógica de automatización, con el objetivo de llevar herramientas de nivel empresarial a los comercios locales.</p>
+          <p className="mt-2 text-muted-foreground">Diseña y desarrolla Wappify de punta a punta: desde la experiencia de usuario hasta la lógica de automatización, con el objetivo de llevar herramientas de nivel empresarial a los comercios locales.</p>
           <div className="mt-4 flex justify-center gap-3 sm:justify-start">
             <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="grid h-10 w-10 place-items-center rounded-xl border border-border hover:border-primary hover:text-primary"><Github className="h-5 w-5" /></a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-xl border border-border hover:border-cta hover:text-cta"><Linkedin className="h-5 w-5" /></a>

@@ -8,9 +8,9 @@ import { Field } from "@/components/Layout";
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto — AutoFlow" },
-      { name: "description", content: "Escríbenos y automatiza tu negocio por WhatsApp con AutoFlow." },
-      { property: "og:title", content: "Contacto — AutoFlow" },
+      { title: "Contacto — Wappify" },
+      { name: "description", content: "Escríbenos y automatiza tu negocio por WhatsApp con Wappify." },
+      { property: "og:title", content: "Contacto — Wappify" },
       { property: "og:description", content: "Soporte por WhatsApp, correo y formulario para PyMEs." },
     ],
   }),
@@ -39,7 +39,7 @@ function Contacto() {
   };
   const info = [
     { icon: MessageCircle, label: "WhatsApp soporte", value: "+52 55 0000 0000", cls: "text-accent" },
-    { icon: Mail, label: "Correo", value: "hola@autoflow.mx", cls: "text-cta" },
+    { icon: Mail, label: "Correo", value: "hola@wappify.mx", cls: "text-cta" },
     { icon: Clock, label: "Horario", value: "Lun–Vie 9:00–18:00", cls: "text-primary" },
   ];
   return (

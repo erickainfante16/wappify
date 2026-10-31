@@ -20,7 +20,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2 text-lg font-extrabold">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-brand"><Bot className="h-5 w-5" /></span>
-          Auto<span className="text-primary">Flow</span>
+          Wapp<span className="text-primary">ify</span>
         </Link>
         <div className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
@@ -184,7 +184,7 @@ export function Field({ name, label, type = "text", error, textarea, defaultValu
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-border py-8 text-center text-sm text-muted-foreground">
-      © 2026 AutoFlow · Proyecto integrador Tecnolochicas · Hecho por Ericka Infante
+      © 2026 Wappify · Proyecto integrador Tecnolochicas · Hecho por Ericka Infante
     </footer>
   );
 }
